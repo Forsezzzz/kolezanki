@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOLEŻANKI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe0f0, #ffeaff);
+      font-family: 'Comic Sans MS', cursive;
+      overflow-x: hidden;
+    }
+
+    .cute-font {
+      font-family: 'Pacifico', cursive;
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .slide-in {
+      animation: slideIn 1.5s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow {
+      box-shadow: 0 0 20px #ff94d3;
+    }
+
+    .discord-icon:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+  </style>
+</head>
+<body class="relative flex items-center justify-center min-h-screen">
+
+  <!-- Napis KOLEŻANKI -->
+  <h1 class="absolute top-10 w-full text-center text-pink-600 text-6xl md:text-8xl cute-font fade-in">KOLEŻANKI</h1>
+
+  <!-- Kolumna z lewej: 2 zdjęcia -->
+  <div class="absolute left-4 top-1/2 transform -translate-y-1/2 space-y-6">
+    <img src="https://i.imgur.com/jcfj2nY.jpeg" class="w-40 rounded-3xl border-4 border-pink-300 glow slide-in" style="animation-delay: 0.5s;" />
+    <img src="https://i.imgur.com/2hGTY25.jpeg" class="w-40 rounded-3xl border-4 border-pink-300 glow slide-in" style="animation-delay: 0.8s;" />
+  </div>
+
+  <!-- Kolumna z prawej: 2 zdjęcia + 1 główne -->
+  <div class="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col items-end space-y-6">
+    <img src="https://i.imgur.com/82iJZ2L.jpeg" class="w-40 rounded-3xl border-4 border-pink-300 glow slide-in" style="animation-delay: 0.5s;" />
+    <img src="https://i.imgur.com/yFBeIq6.jpeg" class="w-40 rounded-3xl border-4 border-pink-300 glow slide-in" style="animation-delay: 0.8s;" />
+  </div>
+
+  <!-- Przycisk NOWOŚCI -->
+<a href="nowosci.html" class="fade-in text-white bg-pink-500 hover:bg-pink-400 px-8 py-4 rounded-full text-2xl font-bold transition-all duration-300 z-10" style="animation-delay: 1.2s;">
+  NOWOŚCI
+</a>
+
+
+  <!-- Ikona Discord -->
+  <a href="https://discord.gg/2mFdRQs6" target="_blank" class="absolute bottom-5 right-5 flex items-center space-x-2 text-pink-700 text-lg font-semibold discord-icon fade-in" style="animation-delay: 1.5s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" class="w-8 h-8" />
+    <span>serwer discord</span>
+  </a>
+</body>
+</html>
